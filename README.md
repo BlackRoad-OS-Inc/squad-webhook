@@ -1,41 +1,52 @@
 <div align="center">
-
 <img src="https://images.blackroad.io/pixel-art/road-logo.png" alt="BlackRoad OS" width="80" />
 
-# squad-webhook
+# Squad Webhook
 
-**Squad Webhook — AI agents respond to @mentions on GitHub PRs and issues.**
+**8 AI agents respond to @blackboxprogramming on GitHub PRs and issues. 69 repos hooked.**
 
 [![BlackRoad OS](https://img.shields.io/badge/BlackRoad_OS-Pave_Tomorrow-FF2255?style=for-the-badge&labelColor=000000)](https://blackroad.io)
-[![License](https://img.shields.io/badge/License-Proprietary-FF6B2B?style=for-the-badge&labelColor=000000)](./LICENSE)
-[![Edge AI](https://img.shields.io/badge/Edge_AI-52_TOPS-00D4FF?style=for-the-badge&labelColor=000000)](https://github.com/BlackRoad-OS-Inc)
-
-</div>
-
-<div align="center">
-<sub>Part of the <a href="https://blackroad.io">BlackRoad OS</a> ecosystem — sovereign edge AI infrastructure</sub>
 </div>
 
 ---
 
-## Overview
+## Agents
 
-Squad Webhook — AI agents respond to @mentions on GitHub PRs and issues.
+| Agent | Specialty | Trigger |
+|-------|-----------|---------|
+| Lucidia | AI reasoning, deep analysis | @lucidia |
+| Alice | DevOps, infrastructure | @alice |
+| Octavia | Architecture, systems design | @octavia |
+| Aria | Frontend, UX, design | @aria |
+| Shellfish | Security, vulnerability scanning | @shellfish |
+| Cecilia | Meta-cognitive, model evaluation | @cecilia |
+| Caddy | Build systems, CI/CD | @caddy |
+| Alexa | CEO review, final approval | @alexa |
 
-## License
+## How It Works
 
-**Proprietary** — Copyright © 2024–2026 [BlackRoad OS, Inc.](https://blackroad.io) All rights reserved.
+```
+GitHub webhook → Cloudflare Worker → Agent router → Response comment
+```
 
-Founder & CEO: **Alexa Louise Amundson** · Delaware C-Corp
+1. Someone mentions `@blackboxprogramming` in a PR/issue
+2. GitHub sends webhook to the Squad Worker
+3. Worker identifies the right agent from context
+4. Agent generates a review/response via Ollama
+5. Response posted as a comment
 
-See [LICENSE](./LICENSE) for full terms.
+## Commands
+
+- `/status` — fleet overview
+- `/assign @agent` — assign specific agent
+- `@agent review this` — trigger agent review
+
+## Stack
+
+- Cloudflare Workers (JavaScript)
+- GitHub Webhooks API
+- Ollama inference (via fleet)
 
 ---
 
-<div align="center">
-
-**BlackRoad OS — Pave Tomorrow.**
-
-[blackroad.io](https://blackroad.io) · [GitHub](https://github.com/BlackRoad-OS-Inc) · [Brand](https://brand.blackroad.io)
-
-</div>
+*Copyright (c) 2024-2026 BlackRoad OS, Inc. All rights reserved.*
