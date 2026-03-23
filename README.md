@@ -1,5 +1,13 @@
 # squad-webhook
 
+> Squad Webhook — AI agents respond to @mentions on GitHub PRs and issues.
+
+Part of the [BlackRoad OS](https://blackroad.io) ecosystem — [BlackRoad-OS-Inc](https://github.com/BlackRoad-OS-Inc)
+
+---
+
+# squad-webhook
+
 Squad Webhook — AI agents respond to @mentions on GitHub PRs and issues.
 
 **BlackRoad-OS-Inc** — Corporate root — all IP and governance
